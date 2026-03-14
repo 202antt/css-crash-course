@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* So we have opened a new file, but we always have to link it */
+/* Head to index.html file and create a link tag in the head "href=styles.css*/
+/* Doing the CSS seperate and putting it in its own file makes it easier to maintain and easier to work with a team. */
+/* With CSS do not try to remember it all. YOU ARE MEANT TO LEARN ON THE GO. */
+/* But that is why I am doing these crash course notes. THEY ARE YOUR REFERENCES ANTHONY lol */
+
+/* Most common CSS Properties */
+/* Colors
+    - background-color
+    - color
+    - Transparency: RGBA (0, 0, 0, 0) the last 0 is anything between 0 and 1.
+
+   Size
+    - width --- vw is the same as vh --- again most used for landing pages ---
+    - height --- try to avoid height as much as possible. --- height is fine when using "vh".
+
+   Fonts
+    - font-family
+    - font-size
+    - font-weight
+    
+   Border
+    - border
+
+   Specificity *when dealing with priorities*
+    - IDs use #
+    - Class use .
+
+  */
+
+
+/* Best practices */
+
+#first-paragraph {
+    color: black;
+}
+
+
+
+/* Worst practices */
+
+#first-paragraph.paragraph-1.paragraph-1.red {
+    color: red;
+}
+
+
+
+/* Good practices to classify */
+
+p.paragraph-1 {
+    color: green;
+}
+
+.paragraph-1.red {
+    color: red;
+}
+
+.paragraph-1 {
+    color: red;
+}
+
+
+/* The most important priority is !important, but try to avoid as much as possible */
+p {
+    color: pink;
+}
