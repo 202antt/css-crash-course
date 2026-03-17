@@ -145,5 +145,73 @@ We use margin when we want to take the whole element and space it out between ot
 
 /* Sticky
     - Follows the normal flow of the page, until the user scrolls past a certain point
-    - Then it will become "position:fixed" */
+    - Then it will become "position:fixed" 
 
+    
+/* Media Queries 
+    - A CSS Feature that allows you to make websites look good on all screen sizes (no matter how big or small. 
+    
+    *Common CSS Breakpoints (max-width)*
+
+        - Small Smarthphones
+            * 480px
+        - Large Smartphones
+            * 640px
+        - Tablets
+            * 768px
+        - Laptops
+            * 1024px
+        - Desktops
+            * 1280px
+    
+    *Always keep your media from largest to biggest to make code easier to read.
+    
+
+.title {
+    font-size: 52px;
+}
+
+.pragraph {
+    font-size: 24px;
+}
+
+@media(max-width: 640px){
+    .title{
+        font-size: 36px;
+    }
+    
+    .pragraph{
+        font-size: 24px;
+    }
+}
+
+    @media(max-width: 480px) {
+    .title{
+        font-size: 32px;
+    }
+
+    .pragraph{
+        font-size: 20px;
+    }
+}
+
+*Psuedo Elements*
+
+
+button:hover{
+    background-color: red;
+    opacity: 30%
+}
+    
+
+button {
+    transition: 300ms;
+
+}
+
+button:hover {
+    opacity: 30%;
+    background-color: red;
+    padding: 4px;
+}
+    */
