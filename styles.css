@@ -6,7 +6,12 @@
 /* With CSS do not try to remember it all. YOU ARE MEANT TO LEARN ON THE GO. */
 /* But that is why I am doing these crash course notes. THEY ARE YOUR REFERENCES ANTHONY lol */
 
+
+
+
 /* Most common CSS Properties */
+
+
 /* Colors
     - background-color
     - color
@@ -29,13 +34,19 @@
     - Class use .
 
 
+   
     
+
     
-    
+------Push to Github--------
+
     git add .
 git commit -m "Updated CSS notes"
 git push
  
+
+
+
 
 
 /* Best practices 
@@ -54,6 +65,8 @@ Worst practices
 
 
 
+
+
 Good practices to classify
 
 p.paragraph-1 {
@@ -69,11 +82,17 @@ p.paragraph-1 {
 }
 
 
+
+
+
 The most important priority is !important, but try to avoid as much as possible
 p {
     color: pink;
 }
  */
+
+
+
 
 /* When to use padding or margin for spacing? 
 
@@ -91,6 +110,9 @@ We use margin when we want to take the whole element and space it out between ot
     margin: 16px;
     - Put space between each box is margin
     */
+
+
+
 
 /* CSS Display Values */
 
@@ -135,6 +157,9 @@ We use margin when we want to take the whole element and space it out between ot
     top: 0%;
 } */
 
+
+
+
 /* More CSS Position Values*/
 
 /* Fixed
@@ -146,6 +171,10 @@ We use margin when we want to take the whole element and space it out between ot
 /* Sticky
     - Follows the normal flow of the page, until the user scrolls past a certain point
     - Then it will become "position:fixed" 
+
+
+
+
 
     
 /* Media Queries 
@@ -164,7 +193,7 @@ We use margin when we want to take the whole element and space it out between ot
         - Desktops
             * 1280px
     
-    *Always keep your media from largest to biggest to make code easier to read.
+    *Always start your media from largest to biggest to make code easier to read.
     
 
 .title {
@@ -195,8 +224,12 @@ We use margin when we want to take the whole element and space it out between ot
     }
 }
 
-*Psuedo Elements*
 
+
+
+*Psuedo Classes*
+
+Hover:
 
 button:hover{
     background-color: red;
@@ -214,4 +247,67 @@ button:hover {
     background-color: red;
     padding: 4px;
 }
-    */
+
+
+
+
+
+
+*Before and After Psuedo Element*
+
+p::after{
+    content: " Hey my name is ";
+    background-color: red;
+    margin: 8px;
+}
+
+
+
+
+
+
+
+
+ Animations:
+
+    p{
+        transform: translateY(16px);
+        animation: pointdown 1000ms infinite alternate-reverse
+    }
+
+@keyframes pointdown{
+    0%{
+        transform: translateY(0);
+    }
+
+    100%{
+        transform: translateY(16px);
+
+    }
+}
+
+
+
+
+
+B E M Properties: (Naming)
+
+- Block Element Modifiers (BEM) is a naming method for writing CSS classes to keep code organised.
+- Naming Method: block_elemtent--modifier
+* B - Block (Standalone Component)
+* E - Element (Parts of the block)
+* M - Modifiers (Variations/modification of blocks and elements)
+
+(The right way)
+<div class="box">
+    <h2 class="box__title">Text</h2>
+    <p class="box__paragraph">Text</p>
+    <button class="box__button box__botton--active">Text</button>
+</div>
+
+(The wrong way)
+<div class="box">
+    <h2 class="title">Text</h2>
+    <p class="text">Text</p>
+    <button class="botton">Text</button>
+</div>
